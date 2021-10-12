@@ -13,9 +13,9 @@ The following describes how to install and use the Mati iOS SDK for your applica
 You can go to GitHub and download the [Mati iOS demo app](https://github.com/GetMati/mati-mobile-examples/tree/main/swiftDemoApp(native))
 
 ## Requirements
-   iOS 11.4  
-   Xcode 12.0  
-   Swift 5.0  
+* iOS 11.4  
+* Xcode 12.0  
+* Swift 5.0  
 
 ## Add the Mati SDK
 <!--
@@ -199,44 +199,46 @@ extension ViewController: MatiButtonResultDelegate {
 
 ## Metadata Usage
 
-#### 0) Metadata – is used as an additional parameter for sending it to you via a webhook after passing verification and is also displayed in the verification on the dashboard
+Metadata is an additional parameter you can send through a webhook or on the dashboard after passing verification.
 
-#### 1) You can use metadata to set specific parameters, including setting your default language and to hide language settings from users.
+### Set Default Language
+
+You can use metadata to set specific parameters, including setting your default language and to hide language settings from users.
 
 key: `fixedLanguage`
 value: locale code of language
 
 For instance, to set the language code for Spain to Spanish, we would set the `fixedLanguage` parameter to `es" `
 
-### Example: Set the Language Code for Spain
+#### Example: Set the Language Code for Spain
 
 **Swift**
 ```swift
 metadata: ["fixedLanguage": "es"]
 ```
 
-#### 2) Or you can set color of main buttons in flow you want.
+### Set Button Colors
 
-2.1)  Set the background color of button
+You can set background and text colors of the flow buttons.
+
+For the background color, use the `buttonColor` parameter:
 
 key: `buttonColor`
 value: hexColor
 
-
-### Example
+#### Example: Set the Flow Button Background Color
 
 **Swift**
 ```swift
 metadata: ["buttonColor": "#C0C8D1"]
 ```
 
-2.2) Set the title color of button
+To set the button's text color use the `buttonTextColor` parameter:
 
 key: `buttonTextColor`
 value: hexColor
 
-
-### Example 
+#### Example: Set the Flow Button Text Color
 
 **Swift**
 ```swift
